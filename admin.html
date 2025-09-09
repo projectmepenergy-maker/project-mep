@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Administrativo</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="admin.js" defer></script>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Tela de Login -->
+    <div id="login-screen">
+      <h2>Login Administrador</h2>
+      <input type="password" id="admin-password" placeholder="Digite a senha">
+      <button id="btn-login">Entrar</button>
+      <p id="login-error" class="error"></p>
+    </div>
+
+    <!-- Tela do Painel Administrativo -->
+    <div id="admin-screen" class="hidden">
+      <h2>Painel de Projetos</h2>
+      <button id="btn-logout" class="logout-btn">Sair</button>
+
+      <h3>Cadastrar / Editar Projeto</h3>
+      <input type="text" id="cpf" placeholder="CPF (somente números)">
+      <input type="text" id="protocolo" placeholder="Protocolo">
+      <input type="text" id="uc" placeholder="UC">
+      <input type="text" id="nome" placeholder="Nome do cliente">
+      <input type="text" id="status" placeholder="Status do projeto">
+      <input type="text" id="prazo" placeholder="Prazo (DD/MM/AAAA)">
+      <button id="btn-salvar">Salvar Projeto</button>
+
+      <h3>Projetos Cadastrados</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>CPF</th>
+            <th>Nome</th>
+            <th>Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="lista-projetos"></tbody>
+      </table>
+    </div>
+
+  </div>
+</body>
+</html>
