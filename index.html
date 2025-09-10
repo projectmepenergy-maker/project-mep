@@ -12,16 +12,18 @@
     <h1>Consultar Status de Projeto</h1>
 
     <div class="consulta">
-      <input type="text" id="cpf" placeholder="Digite o CPF" maxlength="14">
-      <button id="buscar">Buscar</button>
+      <input type="text" id="cpf" placeholder="Digite seu CPF" maxlength="14">
+      <button id="buscar" class="btn-laranja">Buscar</button>
     </div>
 
     <div id="resultado" class="resultado" style="display:none;">
-      <p><strong>Protocolo:</strong> <span id="protocolo"></span></p>
-      <p><strong>UC:</strong> <span id="uc"></span></p>
-      <p><strong>Nome Completo:</strong> <span id="nome"></span></p>
-      <p><strong>Status do Projeto:</strong> <span id="status"></span></p>
-      <p><strong>Prazo:</strong> <span id="prazo"></span></p>
+      <div class="card">
+        <p><strong>Protocolo:</strong> <span id="protocolo"></span></p>
+        <p><strong>UC:</strong> <span id="uc"></span></p>
+        <p><strong>Nome Completo:</strong> <span id="nome"></span></p>
+        <p><strong>Status do Projeto:</strong> <span id="status"></span></p>
+        <p><strong>Prazo:</strong> <span id="prazo"></span></p>
+      </div>
       <button id="voltar" class="btn-laranja">Voltar</button>
     </div>
   </div>
