@@ -33,19 +33,34 @@ function mascararProtocolo(protocolo) {
   return asteriscos + ult3;
 }
 
+// Função para aplicar máscara de CPF enquanto digita
+cpfInput.addEventListener("input", (e) => {
+  let valor = e.target.value.replace(/\D/g, ""); // remove tudo que não é número
+  if (valor.length > 11) valor = valor.slice(0, 11); // máximo 11 dígitos
+
+  valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+  valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+  valor = valor.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+
+  e.target.value = valor;
+});
+
+// Evento de busca
 btnBuscar.addEventListener("click", async () => {
-  const cpf = cpfInput.value.trim();
+  let cpf = cpfInput.value.trim();
   if (!cpf) {
     errorMsg.textContent = "Digite um CPF para consultar.";
     return;
   }
 
+  // Remove máscara antes de buscar no Firebase
+  cpf = cpf.replace(/\D/g, "");
+
   errorMsg.textContent = "";
   loadingDiv.classList.remove("hidden");
 
   try {
-    const dbRef = ref(db);
-    const snapshot = await get(child(dbRef, "clientes/" + cpf));
+    const snapshot = await get(child(ref(db), "clientes/" + cpf));
     loadingDiv.classList.add("hidden");
 
     if (snapshot.exists()) {
