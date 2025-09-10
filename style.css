@@ -1,66 +1,122 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+/* Reset básico */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f0f2f5, #ffffff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
-  max-width: 500px;
-  margin: 50px auto;
-  padding: 20px;
   background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  max-width: 450px;
+  width: 100%;
   text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .logo {
-  max-width: 150px;
+  max-width: 120px;
   margin-bottom: 20px;
 }
 
 h1 {
+  font-size: 24px;
   margin-bottom: 30px;
+  color: #333;
+}
+
+.consulta {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
 .consulta input {
-  padding: 10px;
-  width: 70%;
+  padding: 12px 15px;
   font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.consulta input:focus {
+  border-color: orange;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255,165,0,0.3);
 }
 
 .consulta button {
-  padding: 10px 15px;
+  padding: 12px 15px;
   font-size: 16px;
   border: none;
   background-color: orange;
   color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .consulta button:hover {
-  opacity: 0.9;
+  background-color: #ff9900;
 }
 
-.resultado p {
-  text-align: left;
-  margin: 10px 0;
-}
-
-.btn-laranja {
-  padding: 10px 20px;
-  border: none;
-  background-color: orange;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
+.resultado {
   margin-top: 20px;
 }
 
+.card {
+  background-color: #fdfdfd;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.card p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #444;
+}
+
+.btn-laranja {
+  padding: 12px 20px;
+  border: none;
+  background-color: orange;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
 .btn-laranja:hover {
-  opacity: 0.9;
+  background-color: #ff9900;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .consulta input, .consulta button {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
