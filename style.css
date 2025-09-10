@@ -1,27 +1,19 @@
-/* Reset básico */
-* {
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
-body {
-  background: #f8f9fa;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 
 .container {
-  text-align: center;
-  background: #fff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  max-width: 400px;
   width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 .logo {
@@ -29,52 +21,48 @@ body {
   margin-bottom: 20px;
 }
 
-h2 {
-  color: #333;
-  margin-bottom: 15px;
-}
-
-input[type="text"] {
-  padding: 10px;
+form input {
+  display: block;
   width: 100%;
-  max-width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  font-size: 16px;
+  border-radius: 5px;
 }
 
-button {
-  background: #f28c28;
+form button {
+  padding: 10px 20px;
+  background-color: #007bff;
   color: #fff;
   border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 16px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-button:hover {
-  background: #d97706;
+form button:hover {
+  background-color: #0056b3;
 }
 
-.error {
-  color: red;
-  margin-top: 10px;
-  font-size: 14px;
-}
-
-.hidden {
-  display: none;
-}
-
-.info {
-  text-align: left;
+table {
+  width: 100%;
+  border-collapse: collapse;
   margin-top: 20px;
 }
 
-.info p {
-  margin: 10px 0;
-  font-size: 16px;
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+button {
+  cursor: pointer;
 }
