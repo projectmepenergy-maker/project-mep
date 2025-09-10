@@ -1,26 +1,66 @@
-body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f4f4; }
-.container { max-width: 500px; margin: 50px auto; background:#fff; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
-.logo { display:block; margin: 0 auto 20px; max-width:150px; }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
 
-.input-group { display:flex; align-items:center; margin-bottom:15px; }
-.input-group i { margin-right:10px; }
-input { flex:1; padding:8px; border-radius:5px; border:1px solid #ccc; }
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
 
-button { padding:8px 12px; border:none; border-radius:5px; background:#007bff; color:#fff; cursor:pointer; }
-button:hover { background:#0056b3; }
+.logo {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
 
-.loading { display:flex; align-items:center; margin-top:10px; }
-.loading-spinner { width:20px; height:20px; border:3px solid #ccc; border-top:3px solid #007bff; border-radius:50%; animation:spin 1s linear infinite; margin-right:10px; }
-@keyframes spin { 0%{transform:rotate(0deg);} 100%{transform:rotate(360deg);} }
+h1 {
+  margin-bottom: 30px;
+}
 
-.error { color:red; margin-top:10px; }
-.hidden { display:none; }
+.consulta input {
+  padding: 10px;
+  width: 70%;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
-.info-card { margin-top:20px; padding:15px; border:1px solid #ccc; border-radius:8px; background:#f9f9f9; }
-.info-item { margin-bottom:10px; }
-.info-label { font-weight:bold; }
+.consulta button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  background-color: orange;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-.btn-back { margin-top:15px; background:#6c757d; }
-.btn-back:hover { background:#5a6268; }
+.consulta button:hover {
+  opacity: 0.9;
+}
 
-.footer { margin-top:20px; text-align:center; color:#666; }
+.resultado p {
+  text-align: left;
+  margin: 10px 0;
+}
+
+.btn-laranja {
+  padding: 10px 20px;
+  border: none;
+  background-color: orange;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.btn-laranja:hover {
+  opacity: 0.9;
+}
