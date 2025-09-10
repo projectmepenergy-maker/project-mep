@@ -4,77 +4,73 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Consulta de Projetos</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="style.css"/>
-  <script type="module" src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
   <div class="container">
-    <div class="header">
-      <!-- Apenas logo -->
-      <img src="logo.png" alt="Logo" class="logo">
+    <img src="logo.png" alt="Logo" class="logo">
+
+    <!-- Tela inicial -->
+    <div id="cpf-screen" class="screen">
+      <h2>Consultar Projeto</h2>
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" id="cpf" placeholder="Digite seu CPF" maxlength="14" />
+      </div>
+      <button id="btnBuscar">
+        <i class="fas fa-search"></i> Buscar Projeto
+      </button>
+
+      <div id="loading" class="loading hidden">
+        <div class="loading-spinner"></div>
+        <p>Buscando informações...</p>
+      </div>
+
+      <p id="error" class="error"></p>
     </div>
 
-    <div class="content">
-      <!-- Tela inicial -->
-      <div id="cpf-screen" class="screen">
-        <h2>Consultar Projeto</h2>
-        <div class="input-group">
-          <i class="fas fa-user"></i>
-          <input type="text" id="cpf" placeholder="Digite seu CPF" maxlength="14" />
-        </div>
-        <button id="btnBuscar">
-          <i class="fas fa-search"></i> Buscar Projeto
-        </button>
+    <!-- Tela de resultado -->
+    <div id="result-screen" class="screen hidden">
+      <h2>Detalhes do Projeto</h2>
 
-        <div id="loading" class="loading">
-          <div class="loading-spinner"></div>
-          <p>Buscando informações...</p>
+      <div class="info-card">
+        <div class="info-item">
+          <span class="info-label">Protocolo:</span>
+          <span id="protocolo" class="info-value">-</span>
         </div>
 
-        <p id="error" class="error"></p>
+        <div class="info-item">
+          <span class="info-label">UC:</span>
+          <span id="uc" class="info-value">-</span>
+        </div>
+
+        <div class="info-item">
+          <span class="info-label">Cliente:</span>
+          <span id="nome" class="info-value">-</span>
+        </div>
+
+        <div class="info-item">
+          <span class="info-label">Status:</span>
+          <span id="status" class="info-value status-pendente">-</span>
+        </div>
+
+        <div class="info-item">
+          <span class="info-label">Prazo:</span>
+          <span id="prazo" class="info-value">-</span>
+        </div>
       </div>
 
-      <!-- Tela de resultado -->
-      <div id="result-screen" class="screen hidden">
-        <h2>Detalhes do Projeto</h2>
-
-        <div class="info-card">
-          <div class="info-item">
-            <span class="info-label">Protocolo:</span>
-            <span id="protocolo" class="info-value">-</span>
-          </div>
-
-          <div class="info-item">
-            <span class="info-label">UC:</span>
-            <span id="uc" class="info-value">-</span>
-          </div>
-
-          <div class="info-item">
-            <span class="info-label">Cliente:</span>
-            <span id="nome" class="info-value">-</span>
-          </div>
-
-          <div class="info-item">
-            <span class="info-label">Status:</span>
-            <span id="status" class="info-value status-pendente">-</span>
-          </div>
-
-          <div class="info-item">
-            <span class="info-label">Prazo:</span>
-            <span id="prazo" class="info-value">-</span>
-          </div>
-        </div>
-
-        <button class="btn-back" id="btnVoltar">
-          <i class="fas fa-arrow-left"></i> Voltar
-        </button>
-      </div>
+      <button class="btn-back" id="btnVoltar">
+        <i class="fas fa-arrow-left"></i> Voltar
+      </button>
     </div>
 
     <div class="footer">
       <p>© 2025 - Projeto MEP</p>
     </div>
   </div>
+
+  <script type="module" src="script.js"></script>
 </body>
 </html>
